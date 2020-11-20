@@ -2,18 +2,46 @@
 # Usar python -m tkinter no terminal para dar desplay da versão da biblioteca e um
 # exemplo de interface
 import tkinter
+
+objeto_tk = tkinter.Tk()
 # Class tkinter.Tk():
 # - Classe principal e contem a página inicial
 # - Iniciada sem argumentos
-objeto_tk = tkinter.Tk()
-# Abre a página
+
 objeto_tk.mainloop()
-# altera o título da página objeto_tk
+# Abre a página
+
 objeto_tk.title("Título")
+# altera o título da página objeto_tk
 
+objeto_tk.geometry()
+# altera as dimensões e posição inicial da página
+# recebe uma string "AlturaxLargura+x+y"
+# onde AxL, são o tamanho inicial, e x e y, a posição da janela
 
+objeto_tk.resizable()
+# altera a redimensionalidade da janela
+# parâmetros: altura: none, largura: none (ambos recebem valores booleanos)
+# ex: .resizable(False, True), a largura não pode ser alteradam mas a altura sim
 
+objeto_tk.minsize()
+# define a dimensões mínima da janela
+# dois parâmetros: (largura, altura)
+
+objeto_tk.maxsize()
+# define as dimensões máximas da janela
+# dois parâmetros: (largura, altura)
+
+objeto_tk.state()
+# define o estado inicial da página
+# - state("zoomed"): inicial em tamanho máximo
+# - state("iconic"): inicial minimizado na barra de tarefas
+
+objeto_tk.iconbitmap()
+# substituir o icone padrão por um arquivo .ico
+# ex: objeto_tk.iconbitmap("imagens/icon.ico")
+
+objecto_tcl = tkinter.Tcl()]
 # Funtion tkinter.Tcl():
 # - Substituto do .Tk()
 # - Cria um objeto que "ignora" o Tcl interpreter.
-objecto_tcl = tkinter.Tcl()
