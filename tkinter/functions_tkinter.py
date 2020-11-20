@@ -41,7 +41,16 @@ objeto_tk.iconbitmap()
 # substituir o icone padrão por um arquivo .ico
 # ex: objeto_tk.iconbitmap("imagens/icon.ico")
 
-objecto_tcl = tkinter.Tcl()]
+botaotk = tkinter.Button(objeto_tk)
+# criando um botão que pertence a objeto_tk 'master=objeto_tk'
+# Button possui os seguintes atributos:
+# - text='': o texto que irá aparecer dentro do botão
+# - command='': código que será executado ao apertar o botão
+# obs: command deve receber uma função ou um código presedido de 'lambda: codigo'
+botaotk.pack()
+# mostra o botão na tela
+
+objecto_tcl = tkinter.Tcl()
 # Funtion tkinter.Tcl():
 # - Substituto do .Tk()
 # - Cria um objeto que "ignora" o Tcl interpreter.

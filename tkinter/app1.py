@@ -12,4 +12,14 @@ menu_inicial.state("zoomed") #janela inicial com zoom(tamanho máximo)
 
 menu_inicial.iconbitmap("imagens/icon.ico")
 
+
+def cmd_Click(mensagem):
+    print(mensagem)
+
+
+# criando butão
+cmd = tkinter.Button(menu_inicial, text="Executar", command=lambda:cmd_Click("Nova mensagem"))
+# mostra o botão
+cmd.pack()
+
 menu_inicial.mainloop() # abre a janela principal
