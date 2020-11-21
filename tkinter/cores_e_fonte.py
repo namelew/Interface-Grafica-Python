@@ -18,7 +18,15 @@ label_2.pack()
 
 label_3 = tkinter.Label(menu_inicial,
                         text='Este é o label 3',
-                        font='Verdana 15 italic') # alterando tamanho e tipo
+                        bg='red',
+                        font='Verdana 15 italic', # alterando tamanho e tipo
+                        width=50) # largura do label
 label_3.pack()
+
+label_4 = tkinter.Label(
+    menu_inicial,
+    text='linha1\nlinha2',
+    font='Arial 20'
+).pack()
 
 menu_inicial.mainloop()

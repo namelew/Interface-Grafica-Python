@@ -59,8 +59,26 @@ label = tkinter.Label(objeto_tk, text='Exemplo de Label')
 # - bg = cor de fundo(background)
 # - fg = cor da letra 
 # - font = estilo das letras
+# - width = largura da janela do label(implica no tamanho do texto)
+# - height = altura do label(quantidade de frases que podem ser colocadas dentro dele)
+# - anchor = alinhamento da página(varia segundo os pontos cardiais)
+# - justify = justifica o texto(não altera a posição do texto dentro do label)
+# - padx = adiciona pixeis de padding entre o texto e a borda horizontal
+# - pady = adiciona pixeis de padding entre o texto e a borda vestical
+# - bd = espessura da borda.
+# - relief = tipo da borda.
 # obs 1: sintaxe de font: font='%tipo_da_letra %tamanho %estilo da letra %estilo adicional(se houver)'
 # obs 2: bg e fg aceitam o sistema hexadecimal de cores RGB
+# obs 3: existe 6 tipos de relief(mais informações no arquivo bordas.py):
+#       - solid
+#       - flat
+#       - raised
+#       - sunked
+#       - ridge
+#       - groove
+# obs 4: pontos cardiais para o anchor: 'n'(norte), 's'(sul), 'e'(leste), 'w'(oeste),
+# 'ne'(nordeste), 'nw'(noroeste), 'se'(sudeste), 'sw'(sudoeste) e 'center'(centro).
+# obs 5: comandos aceitos pelo justify(): 'center', 'left', 'right' 
 
 label.pack()
 # mostra o label na tela
