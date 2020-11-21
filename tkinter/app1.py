@@ -17,9 +17,12 @@ def cmd_Click(mensagem):
     print(mensagem)
 
 
-# criando butão
+# Criando objetos
 cmd = tkinter.Button(menu_inicial, text="Executar", command=lambda:cmd_Click("Nova mensagem"))
-# mostra o botão
+label_1 = tkinter.Label(menu_inicial, text='Label 1')
+
+# Pack objetos
+label_1.pack()
 cmd.pack()
 
 menu_inicial.mainloop() # abre a janela principal

@@ -41,14 +41,31 @@ objeto_tk.iconbitmap()
 # substituir o icone padrão por um arquivo .ico
 # ex: objeto_tk.iconbitmap("imagens/icon.ico")
 
-botaotk = tkinter.Button(objeto_tk)
+botaotk = tkinter.Button(objeto_tk, text='Exemplo de Botão')
 # criando um botão que pertence a objeto_tk 'master=objeto_tk'
 # Button possui os seguintes atributos:
 # - text='': o texto que irá aparecer dentro do botão
 # - command='': código que será executado ao apertar o botão
 # obs: command deve receber uma função ou um código presedido de 'lambda: codigo'
+
 botaotk.pack()
 # mostra o botão na tela
+
+label = tkinter.Label(objeto_tk, text='Exemplo de Label')
+# Label's são texto que podem ser inseridos na janela e não tem interação com o usuário
+# ele possui os atributos
+# - master = página que pertence
+# - text = texto do label
+# - bg = cor de fundo(background)
+# - fg = cor da letra 
+# - font = estilo das letras
+# obs 1: sintaxe de font: font='%tipo_da_letra %tamanho %estilo da letra %estilo adicional(se houver)'
+# obs 2: bg e fg aceitam o sistema hexadecimal de cores RGB
+
+label.pack()
+# mostra o label na tela
+# o comando pack() cuida de monstrar os elementos na tela
+# a ordem de apresentação dos elementos e definidas pela ordem dos packs()'s
 
 objecto_tcl = tkinter.Tcl()
 # Funtion tkinter.Tcl():

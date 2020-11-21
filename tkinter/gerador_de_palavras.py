@@ -18,7 +18,10 @@ def gpalavra():
 main = tkinter.Tk()
 main.title("Gerador de Palavras")
 
+leg = tkinter.Label(main, text="Gera palavras no terminal de forma aleatória.")
 cmd = tkinter.Button(main, text="Gerar", command = gpalavra)
+
+leg.pack()
 cmd.pack()
 
 main.mainloop()
