@@ -99,6 +99,7 @@ label.grid(row=0, column=0)
 # - row = index da linha, vai de 0 a n
 # - column = index da coluna, vai de 0 a n
 # - sticky = alinhamento(estilo rosas dos vendos, mesmo formato dos outros)
+# - columnspan = define quantas colunas o widget vai ocupar
 
 caixa_de_texto = tkinter.Entry(objeto_tk).grid(row=0, colmn=1)
 # Caixas de Texto(Entry):

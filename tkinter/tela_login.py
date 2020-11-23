@@ -1,6 +1,7 @@
 import tkinter
+# Uma tela de login que realmente faz login
 
-
+# Lógica
 def login():
     usuario = text_user.get()
     senha = text_senha.get()
@@ -8,6 +9,7 @@ def login():
     confirmar.grid(row=3, column=1,)
 
 
+# Gráfico
 root = tkinter.Tk()
 root.title("Login")
 
