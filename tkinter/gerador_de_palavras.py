@@ -10,18 +10,17 @@ def gpalavra():
         con = random.sample('bcdfghjklmnpqrstvxwz', 1)
         palavra.append(con[0])
         palavra.append(v[0])
-    for l in palavra:
-        print(l, end='')
-    print()
+    tkinter.Label(main, text=''.join(palavra), font='Times 15').grid()
+
 
 
 main = tkinter.Tk()
 main.title("Gerador de Palavras")
 
-leg = tkinter.Label(main, text="Gera palavras no terminal de forma aleatória.")
-cmd = tkinter.Button(main, text="Gerar", command = gpalavra)
+leg = tkinter.Label(main, text="Gera palavras de forma aleatória.", font='Times 15')
+cmd = tkinter.Button(main, text="Gerar", command = gpalavra, font='Times 15')
 
-leg.pack()
-cmd.pack()
+leg.grid()
+cmd.grid()
 
 main.mainloop()

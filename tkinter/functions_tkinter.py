@@ -107,6 +107,9 @@ caixa_de_texto = tkinter.Entry(objeto_tk).grid(row=0, colmn=1)
 # Atributos:
 # - master: página onde será hospedada. No exemplo é objeto_tk.
 
+label.focus()
+# Relacionado ao tab order, define qual vai ser a primeira caixa de texto que irá receber uma entrada por padão
+
 objecto_tcl = tkinter.Tcl()
 # Funtion tkinter.Tcl():
 # - Substituto do .Tk()
