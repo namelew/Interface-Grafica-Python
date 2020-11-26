@@ -110,8 +110,25 @@ caixa_de_texto = tkinter.Entry(objeto_tk).grid(row=0, colmn=1)
 
 label.focus()
 # Relacionado ao tab order, define qual vai ser a primeira caixa de texto que irá receber uma entrada por padão
+
 imagem = tkinter.PhotoImage(file='imagens/smol.png')
 # armzane uma imagem .png dentro da variável imagem e a transforma em um objeto de PhotoImage()
+
+valor = tkinter.IntVar()
+# criação de um objeto IntVar() responsável por guardar valores inteiros provenientes de widgets.
+
+check = tkinter.Checkbutton(objeto_tk, variable = valor)
+# é um botão que gera um retorno booleano(0, 1), dever ser associado a um objeto IntVar() mas possue os mesmos atributos de um button comum(inclusive o command)
+
+lista = tkinter.Listbox(objeto_tk)
+# listbox são como 'listas' visiveis, ela monstram na tela opções que podem ser armazenadas dentro delas.
+lista.insert(0, '1')
+# embora só recebão valores string, podemos adicionar infinitos elementos dentro dela
+# parâmetros:
+# index = valor número que define onde o valor será adicionado(usar 'end' para funcionar como o .append())
+lista.delete(0,0)
+# apaga um ou vários valores da listbox, o primeiro número é de onde ele vai começar e o segundo será o ultimo valor a ser apagado.
+# para apagar todo o conteúdo dela, usar listbox.delete(0, 'end')
 objecto_tcl = tkinter.Tcl()
 # Funtion tkinter.Tcl():
 # - Substituto do .Tk()
