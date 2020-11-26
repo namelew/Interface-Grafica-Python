@@ -1,4 +1,5 @@
 import tkinter
+# inserindo uma imagem no app
 root = tkinter.Tk()
 root.title("Aplicação")
 

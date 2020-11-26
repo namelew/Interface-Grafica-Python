@@ -68,6 +68,7 @@ label = tkinter.Label(objeto_tk, text='Exemplo de Label')
 # - bd = espessura da borda.
 # - relief = tipo da borda.
 # - textvariable = armazena um valor de um objeto atrelado a classe StringVar()
+# - image = armzana um objeto que armazena uma imagem
 # obs 1: sintaxe de font: font='%tipo_da_letra %tamanho %estilo da letra %estilo adicional(se houver)'
 # obs 2: bg e fg aceitam o sistema hexadecimal de cores RGB
 # obs 3: existe 6 tipos de relief(mais informações no arquivo bordas.py):
@@ -109,7 +110,8 @@ caixa_de_texto = tkinter.Entry(objeto_tk).grid(row=0, colmn=1)
 
 label.focus()
 # Relacionado ao tab order, define qual vai ser a primeira caixa de texto que irá receber uma entrada por padão
-
+imagem = tkinter.PhotoImage(file='imagens/smol.png')
+# armzane uma imagem .png dentro da variável imagem e a transforma em um objeto de PhotoImage()
 objecto_tcl = tkinter.Tcl()
 # Funtion tkinter.Tcl():
 # - Substituto do .Tk()
