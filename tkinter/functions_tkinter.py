@@ -119,16 +119,57 @@ valor = tkinter.IntVar()
 
 check = tkinter.Checkbutton(objeto_tk, variable = valor)
 # é um botão que gera um retorno booleano(0, 1), dever ser associado a um objeto IntVar() mas possue os mesmos atributos de um button comum(inclusive o command)
+# Atributos:
+# - master: mesmo coisa dos outros
+# - variable = variavel que receberá o valor bool, 0 ou 1. Normalmente é um objeto IntVar()
 
 lista = tkinter.Listbox(objeto_tk)
 # listbox são como 'listas' visiveis, ela monstram na tela opções que podem ser armazenadas dentro delas.
+# Atributos:
+# - master = mesmo dos outros
+# - selectmode = alterna o modo de seleção de elementos
+# obs: os modos de seleção são: 'extended'(Mútipla seleção)
+
 lista.insert(0, '1')
 # embora só recebão valores string, podemos adicionar infinitos elementos dentro dela
 # parâmetros:
 # index = valor número que define onde o valor será adicionado(usar 'end' para funcionar como o .append())
+
 lista.delete(0,0)
 # apaga um ou vários valores da listbox, o primeiro número é de onde ele vai começar e o segundo será o ultimo valor a ser apagado.
 # para apagar todo o conteúdo dela, usar listbox.delete(0, 'end')
+
+mensagem = tkinter.Message(objeto_tk, text='Essa é uma Message', width=200)
+# parecido com um label, mas com uma organização mais 'agradável'
+# atributos(Basicamente os mesmos dos Labels(Não repetirei os já citados):
+# - master, text, width: os atributos principais da message e os que mais serão alterados
+
+scale = tkinter.Scale(objeto_tk, from_=0, to=100)
+# scale é uma barra a qual o usuário pode interagir. Pode receber comandos, funções, dentro dele ou ter seus valores atrelados a um button. Mais detalhes no arquivo scale.py.
+# Atributos:
+# - master = mesmo de sempre
+# - from_ = valor mínimo do scale
+# - to = valor máximo do scale
+# - resolution = taxa de variação dos valores
+# - orient = disposição do scale na tela(pode ser vestical ou horizontal, devem ser referenciados como strings)
+# - command = armazena uma função que será executada conforme a variação dos valores
+
+v1 = tkinter.IntVar()
+ra1 = tkinter.Radiobutton(objeto_tk, text='Exemplo RadioButton', variable=v1, value=1)
+# radiobuttons são widgets parecidos com checkboxs, mas que retornão valores diferentes de valores bool.
+# Elas podem conter funções e necessitam de um objeto que faça um elo entre elas, no exemplo se está usando o v1. Mais informações me radiobutton.py
+# Atributos:
+# - master = mesmo de sempre
+# - text = mais do mesmo
+# - variable = objeto que armazenará o valor que será retornado pelo widget
+# - value = valor que será retornado por ele ao ser selecionado
+# - command = mais do mesmo
+# - indicatoron = aparência do radiobutton
+# Obs 1: Os tipos de aparências definidas pelo indicatoron são: 0(sunken(on), raised(off)), 1(default)
+
+ra1.select()
+# faz com que esse radiobutton seja o padrão a ser selecionado. Util quano trabalhar com vários.
+
 objecto_tcl = tkinter.Tcl()
 # Funtion tkinter.Tcl():
 # - Substituto do .Tk()
