@@ -170,6 +170,33 @@ ra1 = tkinter.Radiobutton(objeto_tk, text='Exemplo RadioButton', variable=v1, va
 ra1.select()
 # faz com que esse radiobutton seja o padrão a ser selecionado. Util quano trabalhar com vários.
 
+s = tkinter.Spinbox(objeto_tk, values=('Um', 2, 3.0, 'Four'))
+# spinbox, são parecidos com as entrys, mais possuem valores pré definidos pelos quais o usuário pode navegar. Devesse tomar cuidado com a entrada, pois o usuário pode alterar os valore padrões. 
+# mais detalhes em spinbox.py
+# Atributos:
+# - master = mais do mesmo
+# - from_, to = mesmos do scale
+# - values = tupla que contem os valores pré definidos(pode conter n valores de n tipos)
+# - wrap = permite que ao passar do ultimo(ou primeiro valor) a seleção volte ao inicio(ou ao fim).
+
+menu = tkinter.Menu(root, tearoff=0)
+menu.add_command(label='Opção 1')
+# Menus são estruturas que se adaptão ao S.O do cliente, e armazenam opções e funções
+# são muito úteis e versáteis dentro de uma aplicação, mais detalhes no arquivo menu.py
+# Atributos:
+# master = mais do mesmo(pode ser um menu também)
+# tearoff = permite que o menu possa sair da tela em que ele se encontra. 0 = desabilitar, 1 = default
+# obs 1: para criar um elo entre um menu e um submenu se usa menu.add_cascade(label='File', menu=submenu) 
+
+menu.add_separator() 
+# cria um separador visual entre as opções que estão antes e depois dele
+
+menu.add_command(label='Opção 1')
+# adiciona uma nova opção ao menu
+
+objeto_tk.config(menu)
+# coloca na janela o menu
+
 objecto_tcl = tkinter.Tcl()
 # Funtion tkinter.Tcl():
 # - Substituto do .Tk()
