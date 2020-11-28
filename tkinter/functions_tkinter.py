@@ -197,6 +197,11 @@ menu.add_command(label='Opção 1')
 objeto_tk.config(menu)
 # coloca na janela o menu
 
+objeto2 = tkinter.Toplevel()
+# um toplevel é uma outra página atrelada a página principal, fazer todas as funções da principal e receber os mesmos atributos. Além de poder ser atrelada a uma  ou mais funções
+objeto2.title('Nova página')
+label2 = tkinter.Label(objeto2, text='Label do TopLevel')
+
 objecto_tcl = tkinter.Tcl()
 # Funtion tkinter.Tcl():
 # - Substituto do .Tk()
